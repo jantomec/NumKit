@@ -52,6 +52,38 @@ public extension Array where Element: FloatingPoint {
     }
 }
 
+public extension Array where Element: Comparable {
+    /// This function finds the minimum in array and returns its index. If array is empty it returns `nil`.
+    ///
+    /// Usage:
+    ///
+    ///     linspace(from: 1, to: 5, n: 4).argmin() // 0
+    ///
+    /// - Returns: Index of array minimum or `nil`.
+    func argmin() -> Int? {
+        if let m = self.min() {
+            return self.firstIndex(of: m)
+        } else {
+            return nil
+        }
+    }
+    /// This function finds the maximum in array and returns its index. If array is empty it returns `nil`.
+    ///
+    /// Usage:
+    ///
+    ///     linspace(from: 1, to: 5, n: 4).argmin() // 0
+    ///
+    /// - Returns: Index of array minimum or `nil`.
+    func argmax() -> Int? {
+        if let m = self.max() {
+            return self.firstIndex(of: m)
+        } else {
+            return nil
+        }
+    }
+    
+}
+
 /// This function creates new array.
 ///
 /// - Warning: i2 may be are may not be included regardles ofthe property includeLast - it also depends on the step.
