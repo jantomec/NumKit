@@ -1,3 +1,3 @@
 # NumKit
 
-Package similar to numpy.
+Package similar to numpy (support package for PlotKit)
